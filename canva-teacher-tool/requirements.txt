@@ -1,2 +1,8 @@
+# Web framework
+fastapi
+uvicorn[standard]
+pydantic
+
+# Core doc generation
 playwright
 pillow

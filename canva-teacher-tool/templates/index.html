@@ -104,7 +104,9 @@
         </div>
         <div class="form-group">
           <label for="school">School</label>
-          <input type="text" id="school" placeholder="e.g. Eton College">
+          <select id="school">
+            <option value="" disabled selected>Loading schools...</option>
+          </select>
         </div>
       </div>
 
@@ -139,6 +141,27 @@
 
   <script>
     const API_BASE = window.location.origin; // Served from same FastAPI app
+
+    // Load school list into dropdown on page load
+    async function loadSchools() {
+      const schoolSelect = document.getElementById('school');
+      try {
+        const res = await fetch(`${API_BASE}/schools`);
+        if (!res.ok) throw new Error('Failed to load schools');
+        const data = await res.json();
+        schoolSelect.innerHTML = '<option value="" disabled selected>Select a school</option>';
+        data.schools.forEach(name => {
+          const opt = document.createElement('option');
+          opt.value = name;
+          opt.textContent = name;
+          schoolSelect.appendChild(opt);
+        });
+      } catch (err) {
+        schoolSelect.innerHTML = '<option value="" disabled selected>Error loading schools</option>';
+        console.error(err);
+      }
+    }
+    loadSchools();
 
     document.getElementById('genForm').addEventListener('submit', async (e) => {
       e.preventDefault();

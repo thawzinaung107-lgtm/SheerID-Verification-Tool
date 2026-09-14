@@ -35,6 +35,9 @@ BASE_DIR = Path(__file__).parent
 app = FastAPI(title="Canva Teacher Document Generator")
 schools = SchoolDatabase()
 
+# Ensure output directory exists before static mount
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 # Serve generated files
 app.mount("/output", StaticFiles(directory=str(OUTPUT_DIR)), name="output")
 

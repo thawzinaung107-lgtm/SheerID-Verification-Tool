@@ -62,244 +62,86 @@ TEMPLATES_DIR = BASE_DIR / "assets" / "templates"
 # DATA: UK SCHOOLS
 # =============================================================================
 
-DEFAULT_SCHOOLS = [
-    # ============ UNITED KINGDOM ============
+DEFAULT_UK_SCHOOLS = [
     {
-        "country": "UK",
         "name": "Leeds Grammar School",
         "address": "Alwoodley Gates, Harrogate Road",
         "town": "Leeds",
         "postcode": "LS17 8GS",
         "phone": "0113 229 1552",
         "lea": "Leeds LEA",
-        "authority": "Department for Education",
-        "id_label": "Staff ID",
-        "license_title": "Qualified Teacher Status",
-        "license_body": "Department for Education",
     },
     {
-        "country": "UK",
         "name": "Manchester Grammar School",
         "address": "Old Hall Lane",
         "town": "Manchester",
         "postcode": "M13 0XT",
         "phone": "0161 224 7201",
         "lea": "Manchester LEA",
-        "authority": "Department for Education",
-        "id_label": "Staff ID",
-        "license_title": "Qualified Teacher Status",
-        "license_body": "Department for Education",
     },
     {
-        "country": "UK",
         "name": "King Edward's School",
         "address": "Edgbaston Park Road",
         "town": "Birmingham",
         "postcode": "B15 2UA",
         "phone": "0121 472 1672",
         "lea": "Birmingham LEA",
-        "authority": "Department for Education",
-        "id_label": "Staff ID",
-        "license_title": "Qualified Teacher Status",
-        "license_body": "Department for Education",
     },
     {
-        "country": "UK",
         "name": "St Paul's School",
         "address": "Lonsdale Road",
         "town": "London",
         "postcode": "SW13 9JT",
         "phone": "020 8748 9162",
         "lea": "Richmond LEA",
-        "authority": "Department for Education",
-        "id_label": "Staff ID",
-        "license_title": "Qualified Teacher Status",
-        "license_body": "Department for Education",
     },
     {
-        "country": "UK",
+        "name": "Westminster School",
+        "address": "Little Dean's Yard",
+        "town": "London",
+        "postcode": "SW1P 3PF",
+        "phone": "020 7963 1000",
+        "lea": "Westminster LEA",
+    },
+    {
         "name": "Eton College",
         "address": "High Street",
         "town": "Windsor",
         "postcode": "SL4 6DW",
         "phone": "01753 370 100",
         "lea": "Windsor LEA",
-        "authority": "Department for Education",
-        "id_label": "Staff ID",
-        "license_title": "Qualified Teacher Status",
-        "license_body": "Department for Education",
-    },
-    # ============ INDIA ============
-    {
-        "country": "India",
-        "name": "Delhi Public School, R.K. Puram",
-        "address": "Sector XII, R.K. Puram",
-        "town": "New Delhi",
-        "postcode": "110022",
-        "phone": "+91 11 2617 1277",
-        "lea": "Directorate of Education, Delhi",
-        "authority": "Central Board of Secondary Education",
-        "id_label": "Teacher ID",
-        "license_title": "B.Ed. Teaching License",
-        "license_body": "National Council for Teacher Education",
     },
     {
-        "country": "India",
-        "name": "The Doon School",
-        "address": "Maldevta Road",
-        "town": "Dehradun",
-        "postcode": "248007",
-        "phone": "+91 135 252 6400",
-        "lea": "Uttarakhand Board of School Education",
-        "authority": "Central Board of Secondary Education",
-        "id_label": "Teacher ID",
-        "license_title": "B.Ed. Teaching License",
-        "license_body": "National Council for Teacher Education",
+        "name": "Harrow School",
+        "address": "5 High Street",
+        "town": "Harrow",
+        "postcode": "HA1 3HP",
+        "phone": "020 8872 8000",
+        "lea": "Harrow LEA",
     },
     {
-        "country": "India",
-        "name": "Cathedral and John Connon School",
-        "address": "6, Purshottamdas Thakurdas Marg",
-        "town": "Mumbai",
-        "postcode": "400001",
-        "phone": "+91 22 2262 3526",
-        "lea": "Maharashtra State Board",
-        "authority": "Council for the Indian School Certificate Examinations",
-        "id_label": "Teacher ID",
-        "license_title": "B.Ed. Teaching License",
-        "license_body": "National Council for Teacher Education",
+        "name": "Rugby School",
+        "address": "Lawrence Sheriff Street",
+        "town": "Rugby",
+        "postcode": "CV22 5EH",
+        "phone": "01788 556 216",
+        "lea": "Warwickshire LEA",
     },
     {
-        "country": "India",
-        "name": "The Shri Ram School",
-        "address": "V-37, Moulsari Avenue",
-        "town": "Gurugram",
-        "postcode": "122002",
-        "phone": "+91 124 475 6600",
-        "lea": "Haryana Board of School Education",
-        "authority": "Central Board of Secondary Education",
-        "id_label": "Teacher ID",
-        "license_title": "B.Ed. Teaching License",
-        "license_body": "National Council for Teacher Education",
+        "name": "Cheltenham Ladies' College",
+        "address": "Bayshill Road",
+        "town": "Cheltenham",
+        "postcode": "GL50 3EP",
+        "phone": "01242 520 691",
+        "lea": "Gloucestershire LEA",
     },
     {
-        "country": "India",
-        "name": "Mayo College",
-        "address": "Srinagar Road",
-        "town": "Ajmer",
-        "postcode": "305001",
-        "phone": "+91 145 266 1226",
-        "lea": "Rajasthan Board of Secondary Education",
-        "authority": "Council for the Indian School Certificate Examinations",
-        "id_label": "Teacher ID",
-        "license_title": "B.Ed. Teaching License",
-        "license_body": "National Council for Teacher Education",
-    },
-    # ============ INDONESIA ============
-    {
-        "country": "Indonesia",
-        "name": "Sekolah Pelita Harapan",
-        "address": "Jl. Jababeka Raya Blok F29",
-        "town": "Cikarang",
-        "postcode": "17550",
-        "phone": "+62 21 8980 3633",
-        "lea": "Dinas Pendidikan Jawa Barat",
-        "authority": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
-        "id_label": "Kartu Guru",
-        "license_title": "Surat Izin Mengajar",
-        "license_body": "Kementerian Pendidikan dan Kebudayaan",
-    },
-    {
-        "country": "Indonesia",
-        "name": "Jakarta Intercultural School",
-        "address": "Jl. Terogong Raya 33",
-        "town": "Jakarta Selatan",
-        "postcode": "12430",
-        "phone": "+62 21 769 2555",
-        "lea": "Dinas Pendidikan DKI Jakarta",
-        "authority": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
-        "id_label": "Kartu Guru",
-        "license_title": "Surat Izin Mengajar",
-        "license_body": "Kementerian Pendidikan dan Kebudayaan",
-    },
-    {
-        "country": "Indonesia",
-        "name": "SMA Negeri 3 Jakarta",
-        "address": "Jl. Setiabudi Barat No. 3",
-        "town": "Jakarta Selatan",
-        "postcode": "12910",
-        "phone": "+62 21 525 4722",
-        "lea": "Dinas Pendidikan DKI Jakarta",
-        "authority": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
-        "id_label": "Kartu Guru",
-        "license_title": "Surat Izin Mengajar",
-        "license_body": "Kementerian Pendidikan dan Kebudayaan",
-    },
-    {
-        "country": "Indonesia",
-        "name": "SMA Negeri 1 Denpasar",
-        "address": "Jl. Kamboja No. 4",
-        "town": "Denpasar",
-        "postcode": "80234",
-        "phone": "+62 361 226 995",
-        "lea": "Dinas Pendidikan Bali",
-        "authority": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
-        "id_label": "Kartu Guru",
-        "license_title": "Surat Izin Mengajar",
-        "license_body": "Kementerian Pendidikan dan Kebudayaan",
-    },
-    # ============ CAMBODIA ============
-    {
-        "country": "Cambodia",
-        "name": "Northbridge International School Cambodia",
-        "address": "No. 885, Preah Norodom Boulevard",
-        "town": "Phnom Penh",
-        "postcode": "12301",
-        "phone": "+855 23 991 591",
-        "lea": "Ministry of Education, Youth and Sport",
-        "authority": "Ministry of Education, Youth and Sport",
-        "id_label": "Teacher ID",
-        "license_title": "Teaching Permit",
-        "license_body": "Ministry of Education, Youth and Sport",
-    },
-    {
-        "country": "Cambodia",
-        "name": "International School of Phnom Penh",
-        "address": "No. 146, Norodom Boulevard",
-        "town": "Phnom Penh",
-        "postcode": "12301",
-        "phone": "+855 23 213 103",
-        "lea": "Ministry of Education, Youth and Sport",
-        "authority": "Ministry of Education, Youth and Sport",
-        "id_label": "Teacher ID",
-        "license_title": "Teaching Permit",
-        "license_body": "Ministry of Education, Youth and Sport",
-    },
-    {
-        "country": "Cambodia",
-        "name": "Lycée René Descartes",
-        "address": "No. 90, Preah Sihanouk Boulevard",
-        "town": "Phnom Penh",
-        "postcode": "12207",
-        "phone": "+855 23 216 179",
-        "lea": "Agency for French Education Abroad",
-        "authority": "Ministry of Education, Youth and Sport",
-        "id_label": "Teacher ID",
-        "license_title": "Teaching Permit",
-        "license_body": "Ministry of Education, Youth and Sport",
-    },
-    {
-        "country": "Cambodia",
-        "name": "Western International School of Phnom Penh",
-        "address": "No. 20, Street 598",
-        "town": "Phnom Penh",
-        "postcode": "12102",
-        "phone": "+855 23 640 6363",
-        "lea": "Ministry of Education, Youth and Sport",
-        "authority": "Ministry of Education, Youth and Sport",
-        "id_label": "Teacher ID",
-        "license_title": "Teaching Permit",
-        "license_body": "Ministry of Education, Youth and Sport",
+        "name": "Dulwich College",
+        "address": "Dulwich Common",
+        "town": "London",
+        "postcode": "SE21 7LD",
+        "phone": "020 8693 3601",
+        "lea": "Southwark LEA",
     },
 ]
 
@@ -322,82 +164,83 @@ TEACHING_POSITIONS = [
     "Year Group Leader",
 ]
 
-NAME_POOLS = {
-    "UK": {
-        "first": [
-            "James", "Oliver", "Harry", "George", "Noah", "Jack", "Charlie", "Oscar",
-            "William", "Henry", "Thomas", "Alfie", "Joshua", "Leo", "Archie", "Ethan",
-            "Emma", "Olivia", "Amelia", "Isla", "Ava", "Mia", "Emily", "Isabella",
-            "Sophia", "Grace", "Lily", "Chloe", "Ella", "Charlotte", "Sophie", "Alice",
-        ],
-        "last": [
-            "Smith", "Jones", "Williams", "Taylor", "Brown", "Davies", "Evans",
-            "Wilson", "Thomas", "Roberts", "Johnson", "Lewis", "Walker", "Robinson",
-            "Wood", "Thompson", "White", "Watson", "Jackson", "Wright", "Green",
-            "Harris", "Cooper", "King",
-        ],
-    },
-    "India": {
-        "first": [
-            "Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Arnav", "Ayaan",
-            "Krishna", "Ishaan", "Shaurya", "Atharv", "Darsh", "Kabir", "Rohan",
-            "Aadhya", "Ananya", "Diya", "Saanvi", "Aaradhya", "Navya", "Myra",
-            "Sara", "Ira", "Ahana", "Siya", "Pari", "Kavya", "Anvi", "Mira",
-        ],
-        "last": [
-            "Sharma", "Kumar", "Singh", "Patel", "Gupta", "Reddy", "Nair", "Rao",
-            "Iyer", "Desai", "Joshi", "Shah", "Mehta", "Agarwal", "Verma",
-            "Yadav", "Malhotra", "Kapoor", "Banerjee", "Das", "Chowdhury",
-        ],
-    },
-    "Indonesia": {
-        "first": [
-            "Budi", "Ahmad", "Muhammad", "Agus", "Hendra", "Rizky", "Dedi", "Andi",
-            "Yusuf", "Adi", "Bayu", "Eko", "Fajar", "Hadi", "Indra", "Joko",
-            "Siti", "Dewi", "Putri", "Nur", "Ayu", "Rina", "Maya", "Lestari",
-            "Ani", "Yuni", "Fitri", "Wulan", "Ratna", "Sari", "Intan", "Mega",
-        ],
-        "last": [
-            "Santoso", "Wijaya", "Sari", "Susanto", "Saputra", "Kusuma", "Setiawan",
-            "Lestari", "Hidayat", "Utama", "Pratama", "Putra", "Wati", "Handayani",
-            "Cahyadi", "Mahendra", "Purnama", "Suryadi", "Ramadhan", "Firmansyah",
-        ],
-    },
-    "Cambodia": {
-        "first": [
-            "Sokha", "Dara", "Sopheap", "Bopha", "Chantha", "Srey", "Kunthea",
-            "Rathanak", "Sovann", "Visal", "Sok", "Chhay", "Khemara", "Pisey",
-            "Sophorn", "Leakhena", "Maly", "Pich", "Sambath", "Vannak", "Thida",
-            "Narith", "Socheata", "Sopheap",
-        ],
-        "last": [
-            "Sok", "Chan", "Chea", "Kim", "Lay", "Lim", "Mao", "Meas", "Ngin",
-            "Ou", "Pen", "Phan", "Prak", "Ros", "Sam", "San", "Sim", "Sok",
-            "Suon", "Thach", "Thai", "Touch", "Vann", "Yem",
-        ],
-    },
-}
+UK_FIRST_NAMES = [
+    "James",
+    "Oliver",
+    "Harry",
+    "George",
+    "Noah",
+    "Jack",
+    "Charlie",
+    "Oscar",
+    "William",
+    "Henry",
+    "Thomas",
+    "Alfie",
+    "Joshua",
+    "Leo",
+    "Archie",
+    "Ethan",
+    "Emma",
+    "Olivia",
+    "Amelia",
+    "Isla",
+    "Ava",
+    "Mia",
+    "Emily",
+    "Isabella",
+    "Sophia",
+    "Grace",
+    "Lily",
+    "Chloe",
+    "Ella",
+    "Charlotte",
+    "Sophie",
+    "Alice",
+]
 
-
-UK_FIRST_NAMES = NAME_POOLS["UK"]["first"]
-UK_LAST_NAMES = NAME_POOLS["UK"]["last"]
-
+UK_LAST_NAMES = [
+    "Smith",
+    "Jones",
+    "Williams",
+    "Taylor",
+    "Brown",
+    "Davies",
+    "Evans",
+    "Wilson",
+    "Thomas",
+    "Roberts",
+    "Johnson",
+    "Lewis",
+    "Walker",
+    "Robinson",
+    "Wood",
+    "Thompson",
+    "White",
+    "Watson",
+    "Jackson",
+    "Wright",
+    "Green",
+    "Harris",
+    "Cooper",
+    "King",
+]
 
 
 class SchoolDatabase:
-    """International schools database with search and random selection."""
+    """UK Schools database with search and random selection."""
 
     def __init__(self):
         self.schools = self._load()
 
     def _load(self) -> List[Dict]:
-        json_path = DATA_DIR / "schools.json"
+        json_path = DATA_DIR / "uk_schools.json"
         if json_path.exists():
             try:
                 return json.loads(json_path.read_text())
             except Exception:
                 pass
-        return DEFAULT_SCHOOLS
+        return DEFAULT_UK_SCHOOLS
 
     def random(self) -> Dict:
         return random.choice(self.schools)
@@ -412,31 +255,22 @@ class SchoolDatabase:
     def list_names(self) -> List[str]:
         return [s["name"] for s in self.schools]
 
-    def list_by_country(self) -> Dict[str, List[Dict]]:
-        grouped: Dict[str, List[Dict]] = {}
-        for school in self.schools:
-            grouped.setdefault(school.get("country", "Other"), []).append(school)
-        return grouped
-
 
 # =============================================================================
 # DATA GENERATORS
 # =============================================================================
 
 
-def generate_name(country: str = "UK") -> Tuple[str, str]:
-    pool = NAME_POOLS.get(country, NAME_POOLS["UK"])
-    return random.choice(pool["first"]), random.choice(pool["last"])
+def generate_name() -> Tuple[str, str]:
+    return random.choice(UK_FIRST_NAMES), random.choice(UK_LAST_NAMES)
 
 
-def generate_dob(min_age: int = 28, max_age: int = 55, country: str = "UK") -> str:
-    """Generate DOB in country-appropriate format."""
+def generate_dob(min_age: int = 28, max_age: int = 55) -> str:
+    """Generate DOB in DD/MM/YYYY format."""
     age = random.randint(min_age, max_age)
     year = datetime.now().year - age
     month = random.randint(1, 12)
     day = random.randint(1, 28)
-    if country == "Indonesia":
-        return f"{day:02d}-{month:02d}-{year}"
     return f"{day:02d}/{month:02d}/{year}"
 
 
@@ -467,19 +301,12 @@ def load_template(name: str) -> str:
 
 
 def load_photo_base64() -> str:
-    """Load a random employee photo as base64 data URL, or return placeholder."""
-    photo_paths = sorted(TEMPLATES_DIR.glob("employee*.png"))
-    if not photo_paths:
-        # Fallback to legacy single file
-        photo_paths = [TEMPLATES_DIR / "employee.png"]
-
-    existing = [p for p in photo_paths if p.exists()]
-    if not existing:
-        return "PHOTO"
-
-    photo_path = random.choice(existing)
-    b64 = base64.b64encode(photo_path.read_bytes()).decode("utf-8")
-    return f'<img src="data:image/png;base64,{b64}" style="width:100%;height:100%;object-fit:cover;border-radius:3px;">'
+    """Load employee photo as base64 data URL, or return placeholder."""
+    photo_path = TEMPLATES_DIR / "employee.png"
+    if photo_path.exists():
+        b64 = base64.b64encode(photo_path.read_bytes()).decode("utf-8")
+        return f'<img src="data:image/png;base64,{b64}" style="width:100%;height:100%;object-fit:cover;border-radius:3px;">'
+    return "PHOTO"
 
 
 def load_chip_base64() -> str:
@@ -492,9 +319,8 @@ def load_chip_base64() -> str:
 
 
 def render_employment_letter(first: str, last: str, school: Dict, position: str) -> str:
-    """Render country-aware employment letter template with data."""
-    country = school.get("country", "UK")
-    template = load_template(f"employment_letter_{country.lower()}") if (TEMPLATES_DIR / f"employment_letter_{country.lower()}.html").exists() else load_template("employment_letter")
+    """Render employment letter template with data."""
+    template = load_template("employment_letter")
 
     staff_id = generate_staff_id()
     start_date = (datetime.now() - timedelta(days=random.randint(180, 1800))).strftime(
@@ -511,15 +337,6 @@ def render_employment_letter(first: str, last: str, school: Dict, position: str)
         department = "Modern Foreign Languages"
     else:
         department = position.replace("Head of ", "").replace(" Department", "")
-
-    # Country-specific signature titles and labels
-    signatory_titles = {
-        "UK": ("Headteacher", "Disclosure and Barring Service", "United Kingdom"),
-        "India": ("Principal", "Police Verification & CBSE Background Check", "India"),
-        "Indonesia": ("Kepala Sekolah", "Surat Keterangan Catatan Kepolisian", "Indonesia"),
-        "Cambodia": ("School Director", "Ministry of Education Background Check", "Cambodia"),
-    }
-    sig_title, bg_check, country_name = signatory_titles.get(country, signatory_titles["UK"])
 
     return template.format(
         school_name=school["name"],
@@ -538,11 +355,6 @@ def render_employment_letter(first: str, last: str, school: Dict, position: str)
         position=position,
         department=department,
         data_controller=generate_data_controller_no(),
-        authority=school.get("authority", "Department for Education"),
-        lea=school.get("lea", ""),
-        sig_title=sig_title,
-        bg_check=bg_check,
-        country_name=country_name,
         # Random signature rotation for realistic hand-signed look
         signature_rotation=round(random.uniform(-3, 3), 1),
     )
@@ -551,9 +363,8 @@ def render_employment_letter(first: str, last: str, school: Dict, position: str)
 def render_teacher_id(
     first: str, last: str, school: Dict, position: str, dob: str
 ) -> str:
-    """Render country-aware teacher ID card template with data."""
-    country = school.get("country", "UK")
-    template = load_template(f"teacher_id_{country.lower()}") if (TEMPLATES_DIR / f"teacher_id_{country.lower()}.html").exists() else load_template("teacher_id")
+    """Render teacher ID card template with data."""
+    template = load_template("teacher_id")
 
     # Extract short position for badge
     if " - " in position:
@@ -561,44 +372,31 @@ def render_teacher_id(
     else:
         pos_short = position.upper().replace("HEAD OF ", "").replace(" DEPARTMENT", "")
 
-    # Country-specific date formats
-    date_fmt = "%d/%m/%Y" if country in {"UK", "India", "Cambodia"} else "%d-%m-%Y"
-
     return template.format(
         school_name_upper=school["name"].upper(),
         full_name_upper=f"{first.upper()} {last.upper()}",
         position_short=pos_short,
         dob=dob,
         # Issue date set to ~2 weeks ago to look established, not freshly minted
-        issue_date=(datetime.now() - timedelta(days=random.randint(10, 20))).strftime(date_fmt),
-        expiry_date=(datetime.now() + timedelta(days=3 * 365)).strftime(date_fmt),
+        issue_date=(datetime.now() - timedelta(days=random.randint(10, 20))).strftime(
+            "%d/%m/%Y"
+        ),
+        expiry_date=(datetime.now() + timedelta(days=3 * 365)).strftime("%d/%m/%Y"),
         staff_id=generate_staff_id(),
         lea=school.get("lea", f"{school['town']} LEA"),
-        country=country,
-        id_label=school.get("id_label", "Staff ID"),
-        authority=school.get("authority", "Department for Education"),
         photo_html=load_photo_base64(),
         chip_html=load_chip_base64(),
     )
 
 
-def render_teaching_license(first: str, last: str, school: Dict) -> str:
-    """Render country-aware teaching license/certificate template with data."""
-    country = school.get("country", "UK")
-    template = load_template(f"teaching_license_{country.lower()}") if (TEMPLATES_DIR / f"teaching_license_{country.lower()}.html").exists() else load_template("teaching_license")
+def render_teaching_license(first: str, last: str) -> str:
+    """Render teaching license (QTS certificate) template with data."""
+    template = load_template("teaching_license")
 
     trn = generate_trn()
     award_date = (datetime.now() - timedelta(days=random.randint(365, 3650))).strftime(
         "%d %B %Y"
     )
-
-    license_id_prefixes = {
-        "UK": "QTS",
-        "India": "NCTE",
-        "Indonesia": "SIM",
-        "Cambodia": "TP",
-    }
-    prefix = license_id_prefixes.get(country, "LIC")
 
     return template.format(
         full_name=f"{first} {last}",
@@ -606,10 +404,6 @@ def render_teaching_license(first: str, last: str, school: Dict) -> str:
         trn_short=trn[:6],
         award_date=award_date,
         year=datetime.now().year,
-        country=country,
-        license_title=school.get("license_title", "Qualified Teacher Status"),
-        license_body=school.get("license_body", "Department for Education"),
-        license_id=f"{prefix}/{datetime.now().year}/{trn[:6]}",
     )
 
 
@@ -711,9 +505,9 @@ async def generate_teacher_id(
     return apply_anti_detection(png, max_rotation=2.0)
 
 
-async def generate_teaching_license(first: str, last: str, school: Dict) -> bytes:
+async def generate_teaching_license(first: str, last: str) -> bytes:
     """Generate teaching license (QTS certificate) as PNG."""
-    html = render_teaching_license(first, last, school)
+    html = render_teaching_license(first, last)
     png = await html_to_png(html, width=560, height=780)
     # Certificate - moderate rotation
     return apply_anti_detection(png, max_rotation=1.0)
@@ -779,7 +573,13 @@ async def main():
             print(f"      {i}. {name}")
         return
 
-    # Select school first so name generation can match country
+    # Parse or generate data
+    if args.name:
+        parts = args.name.split()
+        first, last = parts[0], parts[-1] if len(parts) > 1 else parts[0]
+    else:
+        first, last = generate_name()
+
     if args.school:
         school = schools.search(args.school)
         if not school:
@@ -788,15 +588,8 @@ async def main():
     else:
         school = schools.random()
 
-    # Parse or generate data
-    if args.name:
-        parts = args.name.split()
-        first, last = parts[0], parts[-1] if len(parts) > 1 else parts[0]
-    else:
-        first, last = generate_name(school.get("country", "UK"))
-
     position = args.position or random.choice(TEACHING_POSITIONS)
-    dob = generate_dob(country=school.get("country", "UK"))
+    dob = generate_dob()
 
     print(f"   Teacher: {first} {last}")
     print(f"   School: {school['name']}")
@@ -823,7 +616,7 @@ async def main():
             elif doc_type == "teacher_id":
                 doc = await generate_teacher_id(first, last, school, position, dob)
             else:
-                doc = await generate_teaching_license(first, last, school)
+                doc = await generate_teaching_license(first, last)
 
             output_path = OUTPUT_DIR / f"{doc_type}_{first}_{last}.png"
             output_path.write_bytes(doc)

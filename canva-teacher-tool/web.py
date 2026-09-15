@@ -65,13 +65,7 @@ async def health():
 
 @app.get("/schools")
 async def list_schools():
-    grouped = schools.list_by_country()
-    return {
-        "countries": [
-            {"country": country, "schools": [s["name"] for s in school_list]}
-            for country, school_list in grouped.items()
-        ]
-    }
+    return {"schools": schools.list_names()}
 
 
 @app.post("/generate")
@@ -86,7 +80,7 @@ async def generate(req: GenerateRequest):
         first, last = parts[0], parts[-1] if len(parts) > 1 else parts[0]
     else:
         from main import generate_name
-        first, last = generate_name(school.get("country", "UK"))
+        first, last = generate_name()
 
     if req.school:
         school = schools.search(req.school)
@@ -98,7 +92,7 @@ async def generate(req: GenerateRequest):
     position = req.position or __import__("random").choice(TEACHING_POSITIONS)
 
     from main import generate_dob
-    dob = generate_dob(country=school.get("country", "UK"))
+    dob = generate_dob()
 
     OUTPUT_DIR.mkdir(exist_ok=True)
 
@@ -116,7 +110,7 @@ async def generate(req: GenerateRequest):
             elif dt == "teacher_id":
                 data = await generate_teacher_id(first, last, school, position, dob)
             else:
-                data = await generate_teaching_license(first, last, school)
+                data = await generate_teaching_license(first, last)
 
             filename = f"{dt}_{first}_{last}.png"
             path = OUTPUT_DIR / filename

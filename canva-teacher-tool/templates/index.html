@@ -103,9 +103,18 @@
           <input type="text" id="name" placeholder="e.g. Alice Wang">
         </div>
         <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country">
+            <option value="" disabled selected>Loading countries...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
           <label for="school">School</label>
-          <select id="school">
-            <option value="" disabled selected>Loading schools...</option>
+          <select id="school" disabled>
+            <option value="" disabled selected>Select country first</option>
           </select>
         </div>
       </div>
@@ -142,26 +151,53 @@
   <script>
     const API_BASE = window.location.origin; // Served from same FastAPI app
 
-    // Load school list into dropdown on page load
+    let schoolData = [];
+
+    // Load country/school list into dropdowns on page load
     async function loadSchools() {
+      const countrySelect = document.getElementById('country');
       const schoolSelect = document.getElementById('school');
       try {
         const res = await fetch(`${API_BASE}/schools`);
         if (!res.ok) throw new Error('Failed to load schools');
         const data = await res.json();
-        schoolSelect.innerHTML = '<option value="" disabled selected>Select a school</option>';
-        data.schools.forEach(name => {
+        schoolData = data.countries;
+
+        countrySelect.innerHTML = '<option value="" disabled selected>Select a country</option>';
+        schoolData.forEach(group => {
+          const opt = document.createElement('option');
+          opt.value = group.country;
+          opt.textContent = group.country;
+          countrySelect.appendChild(opt);
+        });
+
+        schoolSelect.innerHTML = '<option value="" disabled selected>Select country first</option>';
+        schoolSelect.disabled = true;
+      } catch (err) {
+        countrySelect.innerHTML = '<option value="" disabled selected>Error loading countries</option>';
+        schoolSelect.innerHTML = '<option value="" disabled selected>Error</option>';
+        console.error(err);
+      }
+    }
+    loadSchools();
+
+    document.getElementById('country').addEventListener('change', (e) => {
+      const country = e.target.value;
+      const schoolSelect = document.getElementById('school');
+      const group = schoolData.find(g => g.country === country);
+      schoolSelect.innerHTML = '<option value="" disabled selected>Select a school</option>';
+      if (group) {
+        group.schools.forEach(name => {
           const opt = document.createElement('option');
           opt.value = name;
           opt.textContent = name;
           schoolSelect.appendChild(opt);
         });
-      } catch (err) {
-        schoolSelect.innerHTML = '<option value="" disabled selected>Error loading schools</option>';
-        console.error(err);
+        schoolSelect.disabled = false;
+      } else {
+        schoolSelect.disabled = true;
       }
-    }
-    loadSchools();
+    });
 
     document.getElementById('genForm').addEventListener('submit', async (e) => {
       e.preventDefault();
